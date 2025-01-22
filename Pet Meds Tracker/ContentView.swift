@@ -10,46 +10,43 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var pets: [Pet]
+    @State private var showingAddPet = false
 
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(pets) { pet in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        PetDetailView(pet: pet)
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(pet.name)
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: deletePets)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button(action: { showingAddPet = true }) {
+                        Label("Add Pet", systemImage: "plus")
                     }
                 }
             }
+            .sheet(isPresented: $showingAddPet) {
+                AddPetView()
+            }
         } detail: {
-            Text("Select an item")
+            Text("Select a pet")
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
+    private func deletePets(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(pets[index])
             }
         }
     }
@@ -57,5 +54,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: Pet.self, inMemory: true)
 }
