@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		3712A7862D4153CC006254AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3712A76B2D4153CA006254AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3712A7722D4153CA006254AB;
+			remoteInfo = "Pet Meds Tracker";
+		};
+		3712A7902D4153CC006254AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3712A76B2D4153CA006254AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3712A7722D4153CA006254AB;
+			remoteInfo = "Pet Meds Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3712A7732D4153CA006254AB /* Pet Meds Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet Meds Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3712A7852D4153CC006254AB /* Pet Meds TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pet Meds TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3712A78F2D4153CC006254AB /* Pet Meds TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pet Meds TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3712A7752D4153CA006254AB /* Pet Meds Tracker */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Pet Meds Tracker";
+			sourceTree = "<group>";
+		};
+		3712A7882D4153CC006254AB /* Pet Meds TrackerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Pet Meds TrackerTests";
+			sourceTree = "<group>";
+		};
+		3712A7922D4153CC006254AB /* Pet Meds TrackerUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Pet Meds TrackerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3712A7702D4153CA006254AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3712A7822D4153CC006254AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3712A78C2D4153CC006254AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3712A76A2D4153CA006254AB = {
+			isa = PBXGroup;
+			children = (
+				3712A7752D4153CA006254AB /* Pet Meds Tracker */,
+				3712A7882D4153CC006254AB /* Pet Meds TrackerTests */,
+				3712A7922D4153CC006254AB /* Pet Meds TrackerUITests */,
+				3712A7742D4153CA006254AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3712A7742D4153CA006254AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3712A7732D4153CA006254AB /* Pet Meds Tracker.app */,
+				3712A7852D4153CC006254AB /* Pet Meds TrackerTests.xctest */,
+				3712A78F2D4153CC006254AB /* Pet Meds TrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3712A7722D4153CA006254AB /* Pet Meds Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3712A7992D4153CC006254AB /* Build configuration list for PBXNativeTarget "Pet Meds Tracker" */;
+			buildPhases = (
+				3712A76F2D4153CA006254AB /* Sources */,
+				3712A7702D4153CA006254AB /* Frameworks */,
+				3712A7712D4153CA006254AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3712A7752D4153CA006254AB /* Pet Meds Tracker */,
+			);
+			name = "Pet Meds Tracker";
+			packageProductDependencies = (
+			);
+			productName = "Pet Meds Tracker";
+			productReference = 3712A7732D4153CA006254AB /* Pet Meds Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3712A7842D4153CC006254AB /* Pet Meds TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3712A79C2D4153CC006254AB /* Build configuration list for PBXNativeTarget "Pet Meds TrackerTests" */;
+			buildPhases = (
+				3712A7812D4153CC006254AB /* Sources */,
+				3712A7822D4153CC006254AB /* Frameworks */,
+				3712A7832D4153CC006254AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3712A7872D4153CC006254AB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3712A7882D4153CC006254AB /* Pet Meds TrackerTests */,
+			);
+			name = "Pet Meds TrackerTests";
+			packageProductDependencies = (
+			);
+			productName = "Pet Meds TrackerTests";
+			productReference = 3712A7852D4153CC006254AB /* Pet Meds TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3712A78E2D4153CC006254AB /* Pet Meds TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3712A79F2D4153CC006254AB /* Build configuration list for PBXNativeTarget "Pet Meds TrackerUITests" */;
+			buildPhases = (
+				3712A78B2D4153CC006254AB /* Sources */,
+				3712A78C2D4153CC006254AB /* Frameworks */,
+				3712A78D2D4153CC006254AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3712A7912D4153CC006254AB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3712A7922D4153CC006254AB /* Pet Meds TrackerUITests */,
+			);
+			name = "Pet Meds TrackerUITests";
+			packageProductDependencies = (
+			);
+			productName = "Pet Meds TrackerUITests";
+			productReference = 3712A78F2D4153CC006254AB /* Pet Meds TrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3712A76B2D4153CA006254AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					3712A7722D4153CA006254AB = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					3712A7842D4153CC006254AB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 3712A7722D4153CA006254AB;
+					};
+					3712A78E2D4153CC006254AB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 3712A7722D4153CA006254AB;
+					};
+				};
+			};
+			buildConfigurationList = 3712A76E2D4153CA006254AB /* Build configuration list for PBXProject "Pet Meds Tracker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3712A76A2D4153CA006254AB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3712A7742D4153CA006254AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3712A7722D4153CA006254AB /* Pet Meds Tracker */,
+				3712A7842D4153CC006254AB /* Pet Meds TrackerTests */,
+				3712A78E2D4153CC006254AB /* Pet Meds TrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3712A7712D4153CA006254AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3712A7832D4153CC006254AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3712A78D2D4153CC006254AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3712A76F2D4153CA006254AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3712A7812D4153CC006254AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3712A78B2D4153CC006254AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3712A7872D4153CC006254AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3712A7722D4153CA006254AB /* Pet Meds Tracker */;
+			targetProxy = 3712A7862D4153CC006254AB /* PBXContainerItemProxy */;
+		};
+		3712A7912D4153CC006254AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3712A7722D4153CA006254AB /* Pet Meds Tracker */;
+			targetProxy = 3712A7902D4153CC006254AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3712A7972D4153CC006254AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3712A7982D4153CC006254AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3712A79A2D4153CC006254AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pet Meds Tracker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigCoffee.Pet-Meds-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3712A79B2D4153CC006254AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pet Meds Tracker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigCoffee.Pet-Meds-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3712A79D2D4153CC006254AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigCoffee.Pet-Meds-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pet Meds Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pet Meds Tracker";
+			};
+			name = Debug;
+		};
+		3712A79E2D4153CC006254AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigCoffee.Pet-Meds-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pet Meds Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pet Meds Tracker";
+			};
+			name = Release;
+		};
+		3712A7A02D4153CC006254AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigCoffee.Pet-Meds-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pet Meds Tracker";
+			};
+			name = Debug;
+		};
+		3712A7A12D4153CC006254AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigCoffee.Pet-Meds-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pet Meds Tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3712A76E2D4153CA006254AB /* Build configuration list for PBXProject "Pet Meds Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3712A7972D4153CC006254AB /* Debug */,
+				3712A7982D4153CC006254AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3712A7992D4153CC006254AB /* Build configuration list for PBXNativeTarget "Pet Meds Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3712A79A2D4153CC006254AB /* Debug */,
+				3712A79B2D4153CC006254AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3712A79C2D4153CC006254AB /* Build configuration list for PBXNativeTarget "Pet Meds TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3712A79D2D4153CC006254AB /* Debug */,
+				3712A79E2D4153CC006254AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3712A79F2D4153CC006254AB /* Build configuration list for PBXNativeTarget "Pet Meds TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3712A7A02D4153CC006254AB /* Debug */,
+				3712A7A12D4153CC006254AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3712A76B2D4153CA006254AB /* Project object */;
+}
