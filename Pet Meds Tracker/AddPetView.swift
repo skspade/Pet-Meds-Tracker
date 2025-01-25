@@ -9,14 +9,14 @@ struct AddPetView: View {
     
     @State private var name = ""
     @State private var species = ""
-    @State private var birthday = Date()
+    @State private var birthDate = Date()
     
     var body: some View {
         NavigationStack {
             Form {
                 TextField("Pet Name", text: $name)
                 TextField("Species", text: $species)
-                DatePicker("Birthday", selection: $birthday, displayedComponents: .date)
+                DatePicker("Birthday", selection: $birthDate, displayedComponents: .date)
             }
             .navigationTitle("New Pet")
             .navigationBarTitleDisplayMode(.inline)
@@ -37,7 +37,7 @@ struct AddPetView: View {
     }
     
     private func addPet() {
-        let pet = Pet(name: name, species: species, birthday: birthday)
+        let pet = Pet(name: name, species: species, birthDate: birthDate)
         modelContext.insert(pet)
         dismiss()
     }
