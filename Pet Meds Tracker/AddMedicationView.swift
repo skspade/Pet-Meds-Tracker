@@ -10,16 +10,19 @@ import SwiftData
 
 struct AddMedicationView: View {
     @Environment(\.dismiss) private var dismiss
-    @Bindable var pet: Pet
-    
-    @State private var name = ""
+    @Environment(\.modelContext) private var modelContext
+    @Query private var pets: [Pet]
+    @State private var medicationName = ""
+    @State private var selectedPet: Pet?
     @State private var dosage = ""
+    @State private var frequency = ""
+    
     @State private var schedule: [Date] = [Date()]
     
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Medication Name", text: $name)
+                TextField("Medication Name", text: $medicationName)
                 TextField("Dosage", text: $dosage)
                 
                 Section("Schedule") {
@@ -35,6 +38,12 @@ struct AddMedicationView: View {
                         Label("Add Date", systemImage: "plus.circle")
                     }
                 }
+                
+                Picker("Pet", selection: $selectedPet) {
+                    ForEach(pets) { pet in
+                        Text(pet.name).tag(pet as Pet?)
+                    }
+                }
             }
             .navigationTitle("New Medication")
             .navigationBarTitleDisplayMode(.inline)
@@ -48,19 +57,25 @@ struct AddMedicationView: View {
                     Button("Save") {
                         addMedication()
                     }
-                    .disabled(name.isEmpty || schedule.isEmpty || dosage.isEmpty)
+                    .disabled(medicationName.isEmpty || schedule.isEmpty || dosage.isEmpty)
                 }
             }
         }
     }
     
     private func addMedication() {
-        let medication = Medication(name: name, dosage: dosage, schedule: schedule)
-        pet.medications.append(medication)
+        let newMedication = Medication(
+            name: medicationName,
+            dosage: dosage,
+            schedule: schedule
+        )
+        modelContext.insert(newMedication)
+        try? modelContext.save()
         dismiss()
     }
 }
 
 #Preview {
-    AddMedicationView(pet: Pet)
+    AddMedicationView()
+        .modelContainer(for: [Medication.self, Pet.self])
 }

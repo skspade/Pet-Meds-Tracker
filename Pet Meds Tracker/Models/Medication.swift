@@ -7,7 +7,7 @@ class Medication {
     var dosage: String
     var schedule: [Date]
     var notes: String?
-    var pet: Pet?
+    @Relationship(deleteRule: .cascade) var pets: [Pet]
     @Relationship(deleteRule: .cascade) var history: [MedicationHistory] = []
     
     init(name: String, dosage: String, schedule: [Date], notes: String? = nil) {
@@ -15,6 +15,7 @@ class Medication {
         self.dosage = dosage
         self.schedule = schedule
         self.notes = notes
+        self.pets = []
     }
 }
 
