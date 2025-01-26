@@ -93,7 +93,7 @@ private struct MedicationRow: View {
     }
     
     var body: some View {
-        var formatter = dateFormatter()
+        let formatter = dateFormatter()
         
         VStack(alignment: .leading) {
             Text(medication.name)
