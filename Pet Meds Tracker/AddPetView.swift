@@ -2,7 +2,6 @@ import SwiftUI
 import SwiftData
 import Foundation
 
-
 struct AddPetView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
@@ -47,6 +46,7 @@ struct AddPetView: View {
     private func addPet() {
         let pet = Pet(name: name, species: species, birthDate: birthDate)
         modelContext.insert(pet)
+        try? modelContext.save()
         dismiss()
     }
 }
