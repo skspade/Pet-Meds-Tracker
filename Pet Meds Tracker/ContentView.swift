@@ -5,13 +5,14 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var pets: [Pet]
     @State private var showingAddPet = false
+    @EnvironmentObject var medicationStore: MedicationStore
 
     var body: some View {
         NavigationSplitView {
             List {
                 ForEach(pets) { pet in
                     NavigationLink {
-                        PetDetailView(pet: pet)
+                        PetDetailView(pet: pet, medicationStore: medicationStore)
                     } label: {
                         Text(pet.name)
                     }
