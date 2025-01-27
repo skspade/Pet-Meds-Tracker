@@ -65,11 +65,15 @@ struct AddMedicationView: View {
     }
     
     private func addMedication() {
+        guard let selectedPet = selectedPet else { return }
+        
         let newMedication = Medication(
             name: medicationName,
             dosage: dosage,
             schedule: schedule
         )
+        
+        selectedPet.medications.append(newMedication)
         modelContext.insert(newMedication)
         try? modelContext.save()
         dismiss()
