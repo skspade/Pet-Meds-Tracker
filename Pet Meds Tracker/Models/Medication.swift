@@ -10,14 +10,16 @@ class Medication {
     var notes: String?
     @Relationship(deleteRule: .cascade) var pets: [Pet]
     @Relationship(deleteRule: .cascade) var history: [MedicationHistory] = []
+    var uniqueIdentifier: UUID
     
-    init(name: String, dosageAmount: Double, dosageUnit: DosageUnit, schedule: [Date], notes: String? = nil) {
+    init(name: String, dosageAmount: Double, dosageUnit: DosageUnit, schedule: [Date], notes: String? = nil, uniqueIdentifier: UUID = UUID()) {
         self.name = name
         self.dosageAmount = dosageAmount
         self.dosageUnit = dosageUnit
         self.schedule = schedule
         self.notes = notes
         self.pets = []
+        self.uniqueIdentifier = uniqueIdentifier
     }
     
     func addPet(_ pet: Pet) {

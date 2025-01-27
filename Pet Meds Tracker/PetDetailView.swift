@@ -5,6 +5,7 @@ import Foundation
 struct PetDetailView: View {
     @Bindable var pet: Pet
     @State private var showingAddMedication = false
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         List {

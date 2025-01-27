@@ -1,12 +1,6 @@
-//
-//  Pet_Meds_TrackerApp.swift
-//  Pet Meds Tracker
-//
-//  Created by Sean Spade on 1/22/25.
-//
-
 import SwiftUI
 import SwiftData
+import CloudKit
 
 @main
 struct Pet_Meds_TrackerApp: App {
@@ -14,7 +8,7 @@ struct Pet_Meds_TrackerApp: App {
     
     init() {
         do {
-            let config = ModelConfiguration(for: Pet.self, Medication.self, MedicationHistory.self)
+            let config = ModelConfiguration(for: Pet.self, Medication.self, MedicationHistory.self, cloudKitContainer: CKContainer.default())
             container = try ModelContainer(for: Pet.self, Medication.self, MedicationHistory.self,
                                         configurations: config)
         } catch {

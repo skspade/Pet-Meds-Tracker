@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MedicationDetailView: View {
     @Bindable var medication: Medication
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         List {
@@ -12,6 +13,13 @@ struct MedicationDetailView: View {
             }
         }
         .navigationTitle("Medication Details")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Delete") {
+                    deleteMedication()
+                }
+            }
+        }
     }
 
     private var dateFormatter: DateFormatter {
@@ -19,6 +27,13 @@ struct MedicationDetailView: View {
         formatter.dateStyle = .medium
         formatter.timeStyle = .short
         return formatter
+    }
+
+    private func deleteMedication() {
+        withAnimation {
+            modelContext.delete(medication)
+            try? modelContext.save()
+        }
     }
 }
 

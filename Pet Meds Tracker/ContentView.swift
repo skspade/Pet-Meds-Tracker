@@ -55,5 +55,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Pet.self, inMemory: true)
+        .modelContainer(for: [Pet.self, Medication.self, MedicationHistory.self], configurations: ModelConfiguration(cloudKitContainer: CKContainer.default()))
 }
