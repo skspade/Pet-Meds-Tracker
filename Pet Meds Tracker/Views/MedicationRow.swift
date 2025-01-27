@@ -6,8 +6,7 @@ struct MedicationRow: View {
     private func dateFormatter() -> DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.timeStyle = .short
         return formatter
     }
     

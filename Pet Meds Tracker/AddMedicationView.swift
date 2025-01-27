@@ -23,7 +23,7 @@ struct AddMedicationView: View {
                         DatePicker(
                             "Date \(index + 1)",
                             selection: $schedule[index],
-                            displayedComponents: .date
+                            displayedComponents: [.date, .hourAndMinute]
                         )
                     }
                     
