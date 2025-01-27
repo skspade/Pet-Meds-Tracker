@@ -16,7 +16,7 @@ struct PetDetailView: View {
         }
         .navigationTitle(pet.name)
         .sheet(isPresented: $showingAddMedication) {
-            AddMedicationView(pet: pet)
+            AddMedicationView()
         }
     }
 }
