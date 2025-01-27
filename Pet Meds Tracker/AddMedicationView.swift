@@ -9,32 +9,57 @@ struct AddMedicationView: View {
     @State private var selectedPet: Pet?
     @State private var dosageAmount: Double = 0.0
     @State private var dosageUnit: DosageUnit = .mg
-    
     @State private var schedule: [Date] = [Date()]
+    @State private var selectedMedication: Medication?
+    @State private var isExistingMedication = false
+    @ObservedObject var medicationStore: MedicationStore
     
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Medication Name", text: $medicationName)
-                TextField("Dosage Amount", value: $dosageAmount, format: .number)
-                
-                Picker("Dosage Unit", selection: $dosageUnit) {
-                    ForEach(DosageUnit.allCases, id: \.self) { unit in
-                        Text(unit.rawValue).tag(unit)
+                Picker("Select Medication", selection: $selectedMedication) {
+                    Text("New Medication").tag(Medication?.none)
+                    ForEach(medicationStore.getAllMedications()) { medication in
+                        Text(medication.name).tag(medication as Medication?)
+                    }
+                }
+                .onChange(of: selectedMedication) { newValue in
+                    isExistingMedication = newValue != nil
+                    if let medication = newValue {
+                        medicationName = medication.name
+                        dosageAmount = medication.dosageAmount
+                        dosageUnit = medication.dosageUnit
+                        schedule = medication.schedule
+                    } else {
+                        medicationName = ""
+                        dosageAmount = 0.0
+                        dosageUnit = .mg
+                        schedule = [Date()]
                     }
                 }
                 
-                Section("Schedule") {
-                    ForEach(schedule.indices, id: \.self) { index in
-                        DatePicker(
-                            "Date \(index + 1)",
-                            selection: $schedule[index],
-                            displayedComponents: [.date, .hourAndMinute]
-                        )
+                if !isExistingMedication {
+                    TextField("Medication Name", text: $medicationName)
+                    TextField("Dosage Amount", value: $dosageAmount, format: .number)
+                    
+                    Picker("Dosage Unit", selection: $dosageUnit) {
+                        ForEach(DosageUnit.allCases, id: \.self) { unit in
+                            Text(unit.rawValue).tag(unit)
+                        }
                     }
                     
-                    Button(action: { schedule.append(Date()) }) {
-                        Label("Add Date", systemImage: "plus.circle")
+                    Section("Schedule") {
+                        ForEach(schedule.indices, id: \.self) { index in
+                            DatePicker(
+                                "Date \(index + 1)",
+                                selection: $schedule[index],
+                                displayedComponents: [.date, .hourAndMinute]
+                            )
+                        }
+                        
+                        Button(action: { schedule.append(Date()) }) {
+                            Label("Add Date", systemImage: "plus.circle")
+                        }
                     }
                 }
                 
@@ -73,21 +98,26 @@ struct AddMedicationView: View {
     private func addMedication() {
         guard let selectedPet = selectedPet else { return }
         
-        let newMedication = Medication(
-            name: medicationName,
-            dosageAmount: dosageAmount,
-            dosageUnit: dosageUnit,
-            schedule: schedule
-        )
+        if let selectedMedication = selectedMedication {
+            selectedPet.medications.append(selectedMedication)
+        } else {
+            let newMedication = Medication(
+                name: medicationName,
+                dosageAmount: dosageAmount,
+                dosageUnit: dosageUnit,
+                schedule: schedule
+            )
+            selectedPet.medications.append(newMedication)
+            modelContext.insert(newMedication)
+            medicationStore.addMedication(newMedication)
+        }
         
-        selectedPet.medications.append(newMedication)
-        modelContext.insert(newMedication)
         try? modelContext.save()
         dismiss()
     }
 }
 
 #Preview {
-    AddMedicationView()
+    AddMedicationView(medicationStore: MedicationStore())
         .modelContainer(for: [Medication.self, Pet.self])
 }

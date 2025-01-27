@@ -6,6 +6,7 @@ struct PetDetailView: View {
     @Bindable var pet: Pet
     @State private var showingAddMedication = false
     @Environment(\.modelContext) private var modelContext
+    @ObservedObject var medicationStore: MedicationStore
 
     var body: some View {
         List {
@@ -17,7 +18,7 @@ struct PetDetailView: View {
         }
         .navigationTitle(pet.name)
         .sheet(isPresented: $showingAddMedication) {
-            AddMedicationView()
+            AddMedicationView(medicationStore: medicationStore)
         }
     }
 }
