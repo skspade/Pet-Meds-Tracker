@@ -17,6 +17,11 @@ class Medication {
         self.notes = notes
         self.pets = []
     }
+    
+    func addPet(_ pet: Pet) {
+        pets.append(pet)
+        pet.medications.append(self)
+    }
 }
 
 @Model
