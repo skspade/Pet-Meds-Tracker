@@ -33,6 +33,14 @@ struct AddPetView: View {
                     .disabled(name.isEmpty)
                 }
             }
+            .gesture(
+                DragGesture()
+                    .onEnded { value in
+                        if value.translation.width > 100 {
+                            dismiss()
+                        }
+                    }
+            )
         }
     }
     

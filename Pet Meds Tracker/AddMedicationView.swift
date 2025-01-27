@@ -1,10 +1,3 @@
-//
-//  AddMedicationView.swift
-//  Pet Meds Tracker
-//
-//  Created by Sean Spade on 1/25/25.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -60,6 +53,14 @@ struct AddMedicationView: View {
                     .disabled(medicationName.isEmpty || schedule.isEmpty || dosage.isEmpty)
                 }
             }
+            .gesture(
+                DragGesture()
+                    .onEnded { value in
+                        if value.translation.width > 100 {
+                            dismiss()
+                        }
+                    }
+            )
         }
     }
     

@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Pet Meds Tracker
-//
-//  Created by Sean Spade on 1/22/25.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -38,6 +31,14 @@ struct ContentView: View {
             .sheet(isPresented: $showingAddPet) {
                 AddPetView()
             }
+            .gesture(
+                DragGesture()
+                    .onEnded { value in
+                        if value.translation.width > 100 {
+                            // Handle navigation back gesture
+                        }
+                    }
+            )
         } detail: {
             Text("Select a pet")
         }
