@@ -7,7 +7,7 @@ struct MedicationDetailView: View {
         List {
             Section(header: Text("Medication Details")) {
                 Text("Name: \(medication.name)")
-                Text("Dosage: \(medication.dosage)")
+                Text("Dosage: \(medication.dosageAmount) \(medication.dosageUnit.rawValue)")
                 Text("Schedule: \(medication.schedule.map { dateFormatter.string(from: $0) }.joined(separator: ", "))")
             }
         }
@@ -23,5 +23,5 @@ struct MedicationDetailView: View {
 }
 
 #Preview {
-    MedicationDetailView(medication: Medication(name: "Sample Med", dosage: "10mg", schedule: [Date()]))
+    MedicationDetailView(medication: Medication(name: "Sample Med", dosageAmount: 10, dosageUnit: .mg, schedule: [Date()]))
 }

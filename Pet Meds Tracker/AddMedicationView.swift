@@ -7,8 +7,8 @@ struct AddMedicationView: View {
     @Query private var pets: [Pet]
     @State private var medicationName = ""
     @State private var selectedPet: Pet?
-    @State private var dosage = ""
-    @State private var frequency = ""
+    @State private var dosageAmount: Double = 0.0
+    @State private var dosageUnit: DosageUnit = .mg
     
     @State private var schedule: [Date] = [Date()]
     
@@ -16,7 +16,13 @@ struct AddMedicationView: View {
         NavigationStack {
             Form {
                 TextField("Medication Name", text: $medicationName)
-                TextField("Dosage", text: $dosage)
+                TextField("Dosage Amount", value: $dosageAmount, format: .number)
+                
+                Picker("Dosage Unit", selection: $dosageUnit) {
+                    ForEach(DosageUnit.allCases, id: \.self) { unit in
+                        Text(unit.rawValue).tag(unit)
+                    }
+                }
                 
                 Section("Schedule") {
                     ForEach(schedule.indices, id: \.self) { index in
@@ -50,7 +56,7 @@ struct AddMedicationView: View {
                     Button("Save") {
                         addMedication()
                     }
-                    .disabled(medicationName.isEmpty || schedule.isEmpty || dosage.isEmpty)
+                    .disabled(medicationName.isEmpty || schedule.isEmpty || dosageAmount <= 0)
                 }
             }
             .gesture(
@@ -69,7 +75,8 @@ struct AddMedicationView: View {
         
         let newMedication = Medication(
             name: medicationName,
-            dosage: dosage,
+            dosageAmount: dosageAmount,
+            dosageUnit: dosageUnit,
             schedule: schedule
         )
         

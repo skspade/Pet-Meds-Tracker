@@ -4,15 +4,17 @@ import SwiftData
 @Model
 class Medication {
     var name: String
-    var dosage: String
+    var dosageAmount: Double
+    var dosageUnit: DosageUnit
     var schedule: [Date]
     var notes: String?
     @Relationship(deleteRule: .cascade) var pets: [Pet]
     @Relationship(deleteRule: .cascade) var history: [MedicationHistory] = []
     
-    init(name: String, dosage: String, schedule: [Date], notes: String? = nil) {
+    init(name: String, dosageAmount: Double, dosageUnit: DosageUnit, schedule: [Date], notes: String? = nil) {
         self.name = name
-        self.dosage = dosage
+        self.dosageAmount = dosageAmount
+        self.dosageUnit = dosageUnit
         self.schedule = schedule
         self.notes = notes
         self.pets = []
@@ -35,4 +37,14 @@ class MedicationHistory {
         self.dosage = dosage
         self.notes = notes
     }
+}
+
+enum DosageUnit: String {
+    case mg = "mg"
+    case ml = "ml"
+    case tablet = "tablet"
+    case capsule = "capsule"
+    case drop = "drop"
+    case tsp = "tsp"
+    case tbsp = "tbsp"
 }
