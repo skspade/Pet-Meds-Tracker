@@ -63,7 +63,7 @@ private struct MedicationsList: View {
     @Bindable var pet: Pet
 
     var body: some View {
-        ForEach(pet.medications) { medication in
+        ForEach(pet.medications.sorted(by: { $0.schedule.first ?? Date() < $1.schedule.first ?? Date() })) { medication in
             NavigationLink(destination: MedicationDetailView(medication: medication)) {
                 MedicationRow(medication: medication)
             }
@@ -97,6 +97,9 @@ private struct MedicationRow: View {
         
         VStack(alignment: .leading) {
             Text(medication.name)
+            Text("Dosage: \(medication.dosage)")
+                .font(.caption)
+                .foregroundStyle(.secondary)
             Text(medication.schedule.map{ formatter.string(from: $0)}.joined(separator: ", "))
                 .font(.caption)
                 .foregroundStyle(.secondary)
