@@ -15,7 +15,7 @@ struct MedicationRow: View {
         
         VStack(alignment: .leading) {
             Text(medication.name)
-            Text("Dosage: \(medication.dosage)")
+            Text("Dosage: \(medication.dosageAmount) \(medication.dosageUnit.rawValue)")
                 .font(.caption)
                 .foregroundStyle(.secondary)
             Text(medication.schedule.map{ formatter.string(from: $0)}.joined(separator: ", "))
