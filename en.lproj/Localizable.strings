@@ -1,0 +1,5 @@
+"medications.section.title" = "Medications";
+"medications.add.button" = "Add Medication";
+"medications.edit.button" = "Edit";
+"medications.delete.button" = "Delete";
+"medications.empty.message" = "No medications";

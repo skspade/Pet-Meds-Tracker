@@ -5,7 +5,7 @@ struct MedicationsSection: View {
     @Binding var showingAddMedication: Bool
 
     var body: some View {
-        Section("Medications") {
+        Section(MedicationStrings.sectionTitle) {
             MedicationsList(pet: pet)
             AddMedicationButton(showingAddMedication: $showingAddMedication)
         }
@@ -16,7 +16,7 @@ private struct MedicationsList: View {
     @Bindable var pet: Pet
 
     var body: some View {
-        ForEach(pet.medications.sorted(by: { $0.schedule.first ?? Date() < $1.schedule.first ?? Date() })) { medication in
+        ForEach(pet.medications.sorted()) { medication in
             NavigationLink(destination: MedicationDetailView(medication: medication)) {
                 MedicationRow(medication: medication)
             }
@@ -38,7 +38,16 @@ private struct AddMedicationButton: View {
 
     var body: some View {
         Button(action: { showingAddMedication = true }) {
-            Label("Add Medication", systemImage: "plus")
+            Label(MedicationStrings.addMedication, systemImage: "plus")
         }
+    }
+}
+
+// Extension to make medications sortable
+extension Medication: Comparable {
+    public static func < (lhs: Medication, rhs: Medication) -> Bool {
+        let lhsDate = lhs.schedule.first ?? .distantFuture
+        let rhsDate = rhs.schedule.first ?? .distantFuture
+        return lhsDate < rhsDate
     }
 }
